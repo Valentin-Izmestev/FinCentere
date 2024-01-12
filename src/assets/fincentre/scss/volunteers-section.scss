@@ -1,0 +1,110 @@
+.volunteers-section{
+    padding-bottom: 10rem;
+
+}
+.volunteers-sl-box{
+    position: relative;
+    .swiper-button-prev,
+    .swiper-button-next{
+        &::after{
+            color: var(--active)
+        }
+        &:hover{
+            &::after{
+                color: var(--active-hover)
+            }
+        }
+    }
+    .swiper-button-prev{
+        left: -3.8rem;
+    }
+    .swiper-button-next{
+        right: -3.8rem;
+    }
+}
+.volunteers-sl{
+    .swiper-pagination{
+        position: relative;
+        margin-top: 3rem;
+        .swiper-pagination-bullet{
+            flex-shrink: 0;
+            width: 1rem;
+            height: 1rem;
+            opacity: 0.5;
+            background-color: var(--primary);
+        }
+        .swiper-pagination-bullet-active{
+            background-color: var(--active-hover);
+            opacity: 1;
+        }
+    }
+}
+
+.volunteer{
+    position: relative;
+    width: 100%;
+    padding-top: 145.5%;
+    border-radius: 3.5rem; 
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .volunteer__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .volunteer__content{
+        position: absolute;  
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        color: var(--light);
+        background: linear-gradient(0deg, rgba(0, 101, 105, 0.90) 41.67%, rgba(0, 101, 105, 0.00) 100%);
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+    .volunteer__post{
+        display: block;
+        margin-bottom: 1rem;
+        text-transform: lowercase; 
+    }
+    .volunteer__name{
+        display: block;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        font-family: 'Comfortaa', sans-serif;
+    } 
+}
+
+
+
+// ===================================
+@media screen and (max-width: 1300px){
+    .volunteers-sl-box{
+        .swiper-button-next, 
+        .swiper-button-prev{
+            display: none;
+        }
+    } 
+}
+
+@media screen and (max-width: 999px){
+    .volunteer {
+        .volunteer__name { 
+            font-size: 2rem; 
+        }
+        .volunteer__post{
+            font-size: 1.4rem;
+        }
+        .volunteer__content{
+            padding: 2rem;
+        }
+    }
+    
+}

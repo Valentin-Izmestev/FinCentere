@@ -1,0 +1,206 @@
+
+@media screen and (max-width: 999px) {
+    .about-section,
+    .projects-section,
+    .volunteers-section{
+        padding-bottom: 8rem;
+    }
+    main {
+        padding-top: 7rem;
+        padding-bottom: 9rem;
+    }
+    #header {
+        .header__bottom--main-page {
+            padding-top: 8rem;
+            padding-bottom: 10rem;
+        }
+    }
+    .about { 
+        gap: 3rem;
+        padding: 3.5rem; 
+        border-radius: 2.5rem; 
+    }
+    .preview-img { 
+        margin-left: 2rem;
+    }
+    .gallery { 
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 860px){
+    .gallery{
+        &--three-col{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .about-section,
+    .projects-section,
+    .volunteers-section{
+        padding-bottom: 5rem;
+    }
+    main {
+        padding-top: 5rem;
+        padding-bottom: 7rem;
+    }
+    #header {
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/nav-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 8rem 1rem 2rem 1rem;
+            z-index: 100;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--great-transition);
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--primary);
+                opacity: 0.8;
+            }
+
+            .main-menu {
+                z-index: 1;
+                flex-direction: column;
+
+                li {
+                    a {
+                        font-sizE: 2.5rem;
+                    }
+                }
+            }
+
+            .social {
+                z-index: 1;
+                margin-top: auto;
+                gap: 1.5rem;
+                width: 100%; 
+                justify-content: center;
+                li {
+                    margin: 0;
+                }
+
+                .social__item {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+
+        .burger-btn {
+            display: block;
+        }
+
+        .header__bottom {
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+            &--main-page {
+                padding-top: 8rem;
+                padding-bottom: 10rem;
+            }
+            .inner {
+                .breadcrumbs {
+                    margin-bottom: 3rem;
+                }
+            }
+        }  
+    }
+    .main-slogan { 
+        max-width: 70rem; 
+        font-size: 3rem; 
+    }
+    .radius{
+        border-radius: 2.5rem;
+    }
+    .about {
+        gap: 3rem;
+        padding: 2rem;  
+        .about__right-col{
+            display: none;
+        }
+    }
+    .section-title {
+        margin-bottom: 3rem;
+    }
+    .burn-more-box {
+        margin-top: 3rem;
+        text-align: right;
+    }
+
+}
+@media screen and (max-width: 660px){
+    .preview-img {
+        float: none;
+        display: block;
+        max-width: 58.7rem;
+        width: 100%; 
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .paginations {
+        margin-top: 4rem;
+        li {
+            a, span { 
+                width: 3rem;
+                height: 3rem; 
+                padding: 5px;
+                padding-top: 9px; 
+                font-size: 1.6rem;  
+            }
+        }
+    }
+    .gallery{
+        &--two-col{
+            grid-template-columns: 1fr;
+        }
+        &--three-col{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .site-name{
+        text-align: center;
+    }
+    .main-slogan {
+        max-width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    #header {
+        .header__bottom--main-page {
+            padding-top: 5rem;
+            padding-bottom: 7rem;
+        }
+    }
+}

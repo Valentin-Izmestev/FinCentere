@@ -1,0 +1,53 @@
+.inputfield::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder);}
+.inputfield::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder);}
+.inputfield:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder);}
+.inputfield:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease;color: var(--placeholder);}
+.inputfield:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputfield:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputfield:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputfield:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+
+.textareafield::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease; color: var(--placeholder)}
+.textareafield:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease; color: var(--placeholder)}
+
+.inputfield{
+    display: block;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1.6rem 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--placeholder);
+    transition: var(--great-transition);
+    color: var(--dark);
+    font-size: 1.8rem;
+    box-sizing: border-box;
+
+    &:active, &:focus{
+        border: 1px solid var(--primary);
+    }
+
+}
+
+.textareafield{
+    display: block;
+    width: 100%;
+    min-height: 18.8rem;
+    padding: 1.6rem 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--placeholder);
+    transition: var(--great-transition);
+    color: var(--dark);
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    resize: none;
+
+    &:active, &:focus{
+        border: 1px solid var(--primary);
+    }
+}

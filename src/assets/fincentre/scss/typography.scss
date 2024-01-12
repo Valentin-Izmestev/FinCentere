@@ -1,0 +1,83 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: 'Comfortaa', sans-serif;  
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary);
+}
+
+h1, .h1{
+    font-size: 4.7rem;
+}
+h2, .h2{
+    font-size: 4rem;
+}
+h3, .h3{
+    font-size: 3.5rem;
+}
+h4, .h4{
+    font-size: 3rem;
+}
+h5, .h5{
+    font-size: 2.5rem;
+}
+h6, .h6{
+    font-size: 2rem;
+}
+
+main{
+    ul{
+        padding-left: 1.7rem;
+        margin:1rem 0;
+        li{
+            list-style-type: disc;
+            &:marker{
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+
+// ===================================
+@media screen and  (max-width: 760px){
+    h1, .h1{
+        font-size: 4rem;
+    }
+    h2, .h2{
+        font-size: 3.5rem;
+    }
+    h3, .h3{
+        font-size: 3rem;
+    }
+    h4, .h4{
+        font-size: 2.5rem;
+    }
+    h5, .h5{
+        font-size: 2rem;
+    }
+    h6, .h6{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and  (max-width: 450px){
+    h1, .h1{
+        font-size: 3.8rem;
+    }
+    h2, .h2{
+        font-size: 3.3rem;
+    }
+    h3, .h3{
+        font-size: 2.8rem;
+    }
+    h4, .h4{
+        font-size: 2.3rem;
+    }
+    h5, .h5{
+         font-size: 1.8rem;
+    }
+    h6, .h6{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+}

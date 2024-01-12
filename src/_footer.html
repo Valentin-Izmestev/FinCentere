@@ -1,0 +1,63 @@
+<footer id="footer">
+    <div class="footer__top">
+        <div class="inner">
+            <a href="/" class="logo">
+                <img src="./assets/fincentre/img/logo.svg" alt="Логотип ФинCentre">
+            </a>
+            <div class="footer__nav">
+                <ul class="main-menu">
+                    <li><a href="./projects.html">Наши проекты</a></li>
+                    <li><a href="./parners.html">Партнеры</a></li>
+                    <li><a href="./contacts.html">Контакты</a></li>
+                </ul>
+                <ul class="social">
+                    <li>
+                        <a href="#" class="social__item social__item--telegram"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social__item social__item--vk"></a>
+                    </li>
+                </ul>
+            </div>
+            <button class="burger-btn">
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="inner">
+            <span class="copyright">© Курского филиала Финансового университета при Правительстве РФ</span>
+            <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+<div class="great-shadow">
+    <div class="modal" id="sing-up-modal" aria-hidden="true">
+        <button class="close-modal close-cross"></button>
+        <h2 class="modal__title h5">Записаться на мероприятие</h2>
+        <form class="sing-up-form">
+            <input type="text" class="inputfield" placeholder="Ваше ФИО*" required="required">
+            <input type="email" class="inputfield" pattern="^\S+@\S+\.\S+$" placeholder="Ваш email*" required="required">
+            <input type="tel" class="inputfield tel" placeholder="Ваш номер телефона">
+            <textarea name="comment" class="textareafield" placeholder="Сообщение"></textarea>
+            <div class="form-btn-box">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                  <button type="submit" class="btn">Отправить</button>
+            </div> 
+            <span class="approval-form">
+                Нажимая на кнопку “отправить заявку” вы соглашаетесь с 
+                <a href="#">политикой конфиденциальности</a>
+            </span>
+        </form>
+        <div class="modal-message modal-message--success">
+            Сообщение успешно отправлено
+        </div>
+        <div class="modal-message modal-message--error">
+            Ошибка отправки сообщения
+        </div>
+    </div>
+</div>

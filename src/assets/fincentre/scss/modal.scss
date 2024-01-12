@@ -1,0 +1,216 @@
+.great-shadow{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 25, 26, 0.7);
+    box-sizing: border-box;
+    z-index: 1000;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal{
+    position: relative;
+    margin: auto;
+    max-width: 50rem;
+    padding: 6rem 3rem 3rem 3rem;
+    border-radius: 1.5rem;
+    background-color: var(--light);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+    .close-cross{
+        top: 2rem;
+        right: 2rem;
+    }
+    .modal__title{
+        margin-bottom: 3rem;
+        color: var(--dark);
+    }
+    .btn{
+        width: 100%;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    .approval-form{
+        display: block;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        text-align: center;
+        a{
+            display: block;
+            color: var(--main);
+        }
+    }
+
+    .modal-message{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        text-align: center;
+        background-color: var(--light);
+        transition: var(--great-transition);
+        opacity: 0;
+        visibility: hidden;
+        &--success{
+            color: var(--primary);
+        }
+        &--error{
+            color: var(--alert);
+        }
+        &.show{
+            opacity: 1;
+            visibility: visible;
+        }
+    } 
+}
+#jGrowl{
+    display: none !important;
+}
+.close-cross{
+    position: absolute;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: transparent;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 3px;
+        background-color: var(--primary);
+        transform: translateY(-50%) rotate(45deg);
+        transition: var(--great-transition);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 3px;
+        background-color: var(--primary);
+        transform: translateY(-50%) rotate(-45deg);
+        transition: var(--great-transition);
+    }
+    &:hover{
+        &::before,
+        &::after{
+            background-color: var(--active-hover);
+        }
+    }
+}
+
+#sing-up-modal{
+    .inputfield{
+        margin-bottom: 2rem;
+    }
+}
+.spinner {
+    width: 70px;
+    height: 18px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: var(--active);
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes bouncedelay {
+    0%, 80%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 40% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+.form-btn-box{ 
+    position: relative; 
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 102, 105, 0.9);
+        border-radius: 25px;
+        transition: var(--great-transition);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .spinner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: var(--great-transition);
+        opacity: 0;
+        visibility: hidden;
+    }
+    &--expectation{
+        &::after, 
+        .spinner{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// ===============================
+@media screen and (max-width: 400px){
+    .modal { 
+        padding: 5rem 1rem 2rem 1rem; 
+    }
+}
